@@ -69,9 +69,10 @@ public class Drawing extends JPanel{
     // Initialize the game window
     JFrame frame = new JFrame("Simple 2D Game");
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frame.setSize(WIDTH, HEIGHT);
+    this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
     frame.setVisible(true);
     frame.add(this);
+    frame.pack();
    
     frame.addKeyListener(keys);
     this.addMouseListener(mouse);
